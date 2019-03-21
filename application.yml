@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active:
+     - dev
+spring:
+  profiles: dev
+  application: 
+    name: clout-dept-dev
+spring:
+  profiles: test
+  application:
+    name: clout-dept-etest         
