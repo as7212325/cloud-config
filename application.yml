@@ -1,12 +1,14 @@
 spring:
   profiles:
     active:
-     - dev
+      - dev
+-------------
 spring:
   profiles: dev
-  application: 
-    name: clout-dept-dev
+  application:
+    name: cloud-dev
+-------------
 spring:
   profiles: test
   application:
-    name: clout-dept-etest         
+    name: cloud-test
