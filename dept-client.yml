@@ -37,4 +37,3 @@ info:
   company.name: zy
   build.artifactId: ${project.artifactId}
   build.version: $project.version$    
----

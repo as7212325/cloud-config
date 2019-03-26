@@ -1,5 +1,10 @@
+spring:
+  profiles:
+    active:
+     -dev
+---     
 server:
-  prot: 8761
+  prot: 8761  
 spring:
   profiles: dev
   application:
