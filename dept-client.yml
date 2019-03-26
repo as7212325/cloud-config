@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+server:
+  port: 8001
+spring:
+  profiles: dev
+  application:
+    name: dept-client
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://114.115.206.199:3306/cloudDB02
+    username: root
+    password: w5EiAvkf#le6Fts1
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200  
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.cloud.entity
+  mapper-locations:
+    - classpath:mapper/**/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+      #,http://eureka8762.com:8762/eureka/,http://eureka8763.com:8763/eureka/
+  instance:
+    instance-id: provider-dept
+info:
+  app.name: provider-dept
+  company.name: zy
+  build.artifactId: ${project.artifactId}
+  build.version: $project.version$    
+---

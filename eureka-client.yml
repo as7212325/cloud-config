@@ -1,0 +1,31 @@
+server:
+  prot: 8761
+spring:
+  profiles: dev
+  application:
+    name: eureka-client
+
+eureka:
+  instance:
+    hostname: eureka8761
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://192.168.100.134:8761/eureka/
+---
+server:
+  port: 8761
+spring:
+  profiles: test
+  application:
+    name: eureka-client
+    
+eureka:
+  instance: 
+    hostname: eureka8761
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://192.168.100.134:8761/eureka/      
