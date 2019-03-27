@@ -5,6 +5,7 @@ spring:
 ---     
 server:
   prot: 8761  
+
 spring:
   profiles: dev
   application:
@@ -17,6 +18,8 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: http://192.168.100.134:8761/eureka/
 ---
 server:
   port: 8761
@@ -32,3 +35,5 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: http://192.168.100.134:8761/eureka/
