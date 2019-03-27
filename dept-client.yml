@@ -23,8 +23,7 @@ spring:
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.cloud.entity
-  mapper-locations:
-    - classpath:mapper/**/*.xml
+  mapper-locations: classpath:mapper/*.xml
 eureka:
   client:
     service-url:
